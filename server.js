@@ -31,6 +31,7 @@ app.get("/api/tables", function(req, res) {
   return res.json(reservations);
 });
 
+// Hidden Comment
 
 if(reservations.length <= 5){
 app.post("/api/tables", function(req, res) {
@@ -42,7 +43,7 @@ app.post("/api/tables", function(req, res) {
 }
 else {
 app.post("/api/waitlist", function(req, res){
-    var newReservation = req.body; 
+    var newReservation = req.body;
     console.log("Waitlist:" + newReservation);
     waitlist.push(newReservation);
     res.json(newReservation);
