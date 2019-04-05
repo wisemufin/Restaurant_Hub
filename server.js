@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-var tables = [
+var reservations = [
   {
     routeName: "",
     name: "Mary",
@@ -34,12 +34,13 @@ app.get("/tables", function(req, res) {
 });
 
 app.get("/api/tables", function(req, res) {
-  return res.json(tables);
+  return res.json(reservations);
 });
 
-app.post("/tables", function(req, res) {
-
-})
+app.post("/api/tables", function(req, res) {
+  var reservations = req.body;
+  console.log(reservations);
+});
 
 // Starts the server
 app.listen(PORT, function() {
