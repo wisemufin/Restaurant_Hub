@@ -38,8 +38,10 @@ app.get("/api/tables", function(req, res) {
 });
 
 app.post("/api/tables", function(req, res) {
-  var reservations = req.body;
-  console.log(reservations);
+  var newReservation = req.body;
+  console.log(newReservation);
+  reservations.push(newReservation);
+  res.json(newReservation);
 });
 
 // Starts the server
