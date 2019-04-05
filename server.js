@@ -6,3 +6,18 @@ var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+// Routes
+// ===========================================================
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "add.html"));
+});
+
+// Starts the server
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
