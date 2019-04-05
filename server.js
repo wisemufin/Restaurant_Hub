@@ -7,8 +7,22 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-var reservations = [];
-var waitlist = [];
+var reservations = [
+    {
+        name: "Mary",
+        phoneNumber: "siasdfasdf",
+        email: "asdfasdf",
+        uniqueID: "asdSdf"
+    }
+];
+var waitlist = [
+    {
+    name: "Mary",
+    phoneNumber: "siasdfasdf",
+    email: "asdfasdf",
+    uniqueID: "asdSdf"
+    }
+];
 
 // Routes
 // ===========================================================
