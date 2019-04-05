@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/wisemufin/Restaurant_Hub/issues"
   },
-  "homepage": "https://github.com/wisemufin/Restaurant_Hub#readme"
+  "homepage": "https://github.com/wisemufin/Restaurant_Hub#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "inquirer": "^6.2.2"
+  }
 }
